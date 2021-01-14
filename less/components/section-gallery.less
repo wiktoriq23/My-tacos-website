@@ -1,0 +1,57 @@
+@import 'var.less';
+
+.section-gallery{
+       
+       &-title{
+
+       
+       position: relative;
+        text-align: center;
+
+        h2:before,
+        h2:after {
+            content: "";
+            position: absolute;
+            width: 30%;
+            height: 10px;
+            display: block;
+            top: 50%;
+            transform: translateY(-50%);
+            @media only screen and (min-width: @mobile) {
+                width: 35%;
+            }
+
+            @media only screen and (min-width: @desktop) {
+                width: 40%;
+            }
+
+
+        }
+
+        h2::before {
+            left: 0;
+            background-image: linear-gradient(to right, transparent , rgb(255, 198, 0));
+        }
+
+        h2:after {
+            right: 0;
+            background-image: linear-gradient(to right, rgb(255, 198, 0) , transparent);
+        }
+    }
+
+    &-images{
+        display: flex;
+        flex-wrap: wrap;
+
+        img{
+
+            @media only screen and (min-width: @mobile){
+                width:calc((100% / 5 - 20px));
+            }
+            width: 50%;
+            margin: 10px;
+            width:calc((100% / 2 - 20px));
+        }
+    }
+
+}

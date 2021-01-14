@@ -1,0 +1,37 @@
+@import 'var.less';
+
+.section-features{
+    display: flex;
+    flex-wrap: wrap;
+    padding:10px;
+
+    &-flex{
+        background-color: white;
+        text-align: center;
+        width: calc((100% / 2) - 44px);
+
+        @media (min-width:@mobile) {
+            width: calc((100% / 4) - 44px);
+            margin: 10px;
+            padding-bottom: 30px;
+        }
+        
+        
+        padding: 10px;
+        border: 1px solid white;
+        
+        margin: 11px;
+
+        &-icon{
+            font-size: 50px;
+        }
+        h3{
+            margin:0 0 5px 0;
+        }
+        p{
+            color: rgba(0,0,0,0.5);
+            font-weight: bold;
+        }
+    }
+  
+}
